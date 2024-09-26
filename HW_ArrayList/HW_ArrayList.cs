@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 using Lists;
@@ -68,31 +69,57 @@ namespace HW_ArrayList
 
             if (int.TryParse(FindIndexBox.Text, out MyIndex))
             {
-                MyIndex--;
+
+                MyIndex--; // ทำให้ index เริ่มจาก 1 (มาจาก 1-1 = 0 ซึ่ง 0 จะเท่ากับลำดับที่ 0 ใน index)
 
                 if (MyIndex >= 0 && MyIndex < list.size())
                 {
-                    // แสดงข้อมูลใน index ที่ระบุ
                     IndexEditBox.Text = list.get(MyIndex).ToString();
+                    IndexEditBox.Enabled = true;
+                    NameEditBtn.Enabled = true;
                 } else
                 {
                     MessageBox.Show($"ไม่พบรายชื่อลำดับที่ {FindIndexBox.Text} ในรายการ");
+                    IndexEditBox.Enabled = false;
+                    NameEditBtn.Enabled = false;
                 }
             } else
             {
                 MessageBox.Show($"โปรดใส่ลำดับของรายชื่อให้ถูกต้อง");
+                IndexEditBox.Enabled = false;
+                NameEditBtn.Enabled = false;
             }
-            FindIndexBox.Clear();
+            //FindIndexBox.Clear();
         }
 
         private void NameEditBtn_Click(object sender, EventArgs e)
         {
+            int index = int.Parse(FindIndexBox.Text) - 1; // ได้ index ที่ต้องการแก้ไขมาแล้ว
+            string NewData = IndexEditBox.Text;
 
+            // ตรวจสอบขอบเขตของ index ก่อนแก้ไข
+            if (index >= 0 && index < list.size())
+            {
+                list.set(index, NewData); // แก้ไขข้อมูลที่ตำแหน่ง index
+                MessageBox.Show($"แก้ไขข้อมูลในตำแหน่งที่ {index + 1} เป็น {NewData} สำเร็จ");
+            }
+            else
+            {
+                MessageBox.Show("โปรดใส่ข้อมูลอีกครั้ง");
+            }
+
+            IndexEditBox.Clear();
+            FindIndexBox.Clear();
         }
-
         private void ListShowBtn_Click(object sender, EventArgs e)
         {
+            ListView.Items.Clear();
 
+            // วนลูปข้อมูลใน ArrayList และเพิ่มลงใน ListBox
+            for (int i = 0; i < list.size(); i++)
+            {
+                ListView.Items.Add(list.get(i).ToString());
+            }
         }
     }
 }

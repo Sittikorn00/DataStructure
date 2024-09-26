@@ -112,7 +112,7 @@
             // 
             // NameEditBtn
             // 
-            this.NameEditBtn.Location = new System.Drawing.Point(691, 83);
+            this.NameEditBtn.Location = new System.Drawing.Point(691, 85);
             this.NameEditBtn.Name = "NameEditBtn";
             this.NameEditBtn.Size = new System.Drawing.Size(88, 39);
             this.NameEditBtn.TabIndex = 7;
@@ -122,10 +122,13 @@
             // 
             // ListView
             // 
+            this.ListView.BackColor = System.Drawing.SystemColors.Window;
+            this.ListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.ListView.HideSelection = false;
             this.ListView.Location = new System.Drawing.Point(21, 163);
             this.ListView.Name = "ListView";
             this.ListView.Size = new System.Drawing.Size(646, 264);
+            this.ListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ListView.TabIndex = 8;
             this.ListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -143,7 +146,7 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(673, 405);
+            this.Label1.Location = new System.Drawing.Point(673, 404);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(58, 22);
             this.Label1.TabIndex = 10;
@@ -153,7 +156,7 @@
             // 
             this.ListLabel.AutoSize = true;
             this.ListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListLabel.Location = new System.Drawing.Point(736, 405);
+            this.ListLabel.Location = new System.Drawing.Point(736, 404);
             this.ListLabel.Name = "ListLabel";
             this.ListLabel.Size = new System.Drawing.Size(20, 22);
             this.ListLabel.TabIndex = 11;
@@ -163,7 +166,7 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(763, 405);
+            this.Label2.Location = new System.Drawing.Point(763, 404);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(31, 22);
             this.Label2.TabIndex = 12;
