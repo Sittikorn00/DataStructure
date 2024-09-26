@@ -31,7 +31,6 @@ namespace HW_ArrayList
             }
             ListLabel.Text = list.size().ToString();
         }
-
         private void FindBtn_Click(object sender, EventArgs e)
         {
             string FindName = FillBox.Text;
@@ -45,7 +44,6 @@ namespace HW_ArrayList
             }
             FillBox.Clear();
         }
-
         private void DelBtn_Click(object sender, EventArgs e)
         {
             string DelName = FillBox.Text;
@@ -61,7 +59,6 @@ namespace HW_ArrayList
             FillBox.Clear();
             ListLabel.Text = list.size().ToString();
         }
-
         private void FindIndexBtn_Click(object sender, EventArgs e)
         {
             int MyIndex;
@@ -91,7 +88,6 @@ namespace HW_ArrayList
             }
             //FindIndexBox.Clear();
         }
-
         private void NameEditBtn_Click(object sender, EventArgs e)
         {
             int index = int.Parse(FindIndexBox.Text) - 1; // ได้ index ที่ต้องการแก้ไขมาแล้ว
