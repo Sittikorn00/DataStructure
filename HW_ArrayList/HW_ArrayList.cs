@@ -63,17 +63,26 @@ namespace HW_ArrayList
 
         private void FindIndexBtn_Click(object sender, EventArgs e)
         {
-            int FindIndex = int.Parse(FindIndexBox.Text);
+            int MyIndex;
             IndexEditBox.Clear();
 
-            if (list.get(FindIndex))
+            if (int.TryParse(FindIndexBox.Text, out MyIndex))
             {
-                list.indexOf(FindIndex);
-                string IndexName = list.get(FindIndex).ToString();
+                MyIndex--;
+
+                if (MyIndex >= 0 && MyIndex < list.size())
+                {
+                    // แสดงข้อมูลใน index ที่ระบุ
+                    IndexEditBox.Text = list.get(MyIndex).ToString();
+                } else
+                {
+                    MessageBox.Show($"ไม่พบรายชื่อลำดับที่ {FindIndexBox.Text} ในรายการ");
+                }
             } else
             {
-                IndexEditBox.Enabled = false;
+                MessageBox.Show($"โปรดใส่ลำดับของรายชื่อให้ถูกต้อง");
             }
+            FindIndexBox.Clear();
         }
 
         private void NameEditBtn_Click(object sender, EventArgs e)
