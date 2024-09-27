@@ -86,11 +86,11 @@ namespace HW_ArrayList
         private void IndexEditBtn_Click(object sender, EventArgs e)
         {
             int index = int.Parse(FindIndexBox.Text) - 1; // ได้ index ที่ต้องการแก้ไขมาแล้ว
-            string NewData = IndexEditBox.Text;
+            string UpdateData = IndexEditBox.Text;
 
             
-            list.set(index, NewData); // แก้ไขข้อมูลที่ตำแหน่ง index
-            MessageBox.Show($"แก้ไขข้อมูลในลำดับที่ {index + 1} เป็น {NewData} สำเร็จ");
+            list.set(index, UpdateData); // แก้ไขข้อมูลที่ตำแหน่ง index
+            MessageBox.Show($"แก้ไขข้อมูลในลำดับที่ {index + 1} เป็น {UpdateData} สำเร็จ");
 
             IndexEditBox.Clear();
             FindIndexBox.Clear();
