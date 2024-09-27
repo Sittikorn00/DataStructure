@@ -70,19 +70,16 @@ namespace HW_ArrayList
                 if (MyIndex >= 0 && MyIndex < list.size())
                 {
                     IndexEditBox.Text = list.get(MyIndex).ToString();
-                    IndexEditBox.Enabled = true;
-                    IndexEditBtn.Enabled = true;
+                    OnIndexEdit();
                 } else
                 {
                     MessageBox.Show($"ไม่พบรายชื่อลำดับที่ {FindIndexBox.Text} ในรายการ");
-                    IndexEditBox.Enabled = false;
-                    IndexEditBtn.Enabled = false;
+                    OffIndexEdit();
                 }
             } else
             {
                 MessageBox.Show($"โปรดใส่ลำดับของรายชื่อให้ถูกต้อง");
-                IndexEditBox.Enabled = false;
-                IndexEditBtn.Enabled = false;
+                OffIndexEdit();
             }
             //FindIndexBox.Clear();
         }
@@ -108,5 +105,16 @@ namespace HW_ArrayList
                 ListView.Items.Add($"{i + 1}. " + list.get(i));
             }
         }
+
+        private void OnIndexEdit()
+        {
+            IndexEditBox.Enabled = true;
+            IndexEditBtn.Enabled = true;
+        } // เปิด Box และ Button ของ IndexEdit
+        private void OffIndexEdit()
+        {
+            IndexEditBox.Enabled = false;
+            IndexEditBtn.Enabled = false;
+        } // ปิด Box และ Button ของ IndexEdit
     }
 }
