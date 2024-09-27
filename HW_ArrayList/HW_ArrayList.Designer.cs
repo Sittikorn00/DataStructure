@@ -35,7 +35,7 @@
             this.FindIndexBox = new System.Windows.Forms.RichTextBox();
             this.FindIndexBtn = new System.Windows.Forms.Button();
             this.IndexEditBox = new System.Windows.Forms.RichTextBox();
-            this.NameEditBtn = new System.Windows.Forms.Button();
+            this.IndexEditBtn = new System.Windows.Forms.Button();
             this.ListView = new System.Windows.Forms.ListView();
             this.ListShowBtn = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
@@ -110,15 +110,15 @@
             this.IndexEditBox.TabIndex = 6;
             this.IndexEditBox.Text = "";
             // 
-            // NameEditBtn
+            // IndexEditBtn
             // 
-            this.NameEditBtn.Location = new System.Drawing.Point(691, 85);
-            this.NameEditBtn.Name = "NameEditBtn";
-            this.NameEditBtn.Size = new System.Drawing.Size(88, 39);
-            this.NameEditBtn.TabIndex = 7;
-            this.NameEditBtn.Text = "แก้ไขชื่อ";
-            this.NameEditBtn.UseVisualStyleBackColor = true;
-            this.NameEditBtn.Click += new System.EventHandler(this.NameEditBtn_Click);
+            this.IndexEditBtn.Location = new System.Drawing.Point(691, 85);
+            this.IndexEditBtn.Name = "IndexEditBtn";
+            this.IndexEditBtn.Size = new System.Drawing.Size(88, 39);
+            this.IndexEditBtn.TabIndex = 7;
+            this.IndexEditBtn.Text = "แก้ไขชื่อ";
+            this.IndexEditBtn.UseVisualStyleBackColor = true;
+            this.IndexEditBtn.Click += new System.EventHandler(this.IndexEditBtn_Click);
             // 
             // ListView
             // 
@@ -128,9 +128,9 @@
             this.ListView.Location = new System.Drawing.Point(21, 163);
             this.ListView.Name = "ListView";
             this.ListView.Size = new System.Drawing.Size(646, 264);
-            this.ListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ListView.TabIndex = 8;
             this.ListView.UseCompatibleStateImageBehavior = false;
+            this.ListView.View = System.Windows.Forms.View.List;
             // 
             // ListShowBtn
             // 
@@ -182,7 +182,7 @@
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.ListShowBtn);
             this.Controls.Add(this.ListView);
-            this.Controls.Add(this.NameEditBtn);
+            this.Controls.Add(this.IndexEditBtn);
             this.Controls.Add(this.IndexEditBox);
             this.Controls.Add(this.FindIndexBtn);
             this.Controls.Add(this.FindIndexBox);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.RichTextBox FindIndexBox;
         private System.Windows.Forms.Button FindIndexBtn;
         private System.Windows.Forms.RichTextBox IndexEditBox;
-        private System.Windows.Forms.Button NameEditBtn;
+        private System.Windows.Forms.Button IndexEditBtn;
         private System.Windows.Forms.ListView ListView;
         private System.Windows.Forms.Button ListShowBtn;
         private System.Windows.Forms.Label Label1;

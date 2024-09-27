@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using System.Reflection;
 using System.Windows.Forms;
 using Lists;
 
@@ -18,7 +16,7 @@ namespace HW_ArrayList
         private void AddBtn_Click(object sender, EventArgs e)
         {
             string name = FillBox.Text;
-            if (name != null && name != "") // ตรวจสอบว่าชื่อไม่ว่างเปล่า
+            if (!string.IsNullOrEmpty(name)) // ตรวจสอบว่าชื่อไม่ว่างเปล่า
             {
                 list.add(name);
                 FillBox.Clear();
@@ -73,36 +71,29 @@ namespace HW_ArrayList
                 {
                     IndexEditBox.Text = list.get(MyIndex).ToString();
                     IndexEditBox.Enabled = true;
-                    NameEditBtn.Enabled = true;
+                    IndexEditBtn.Enabled = true;
                 } else
                 {
                     MessageBox.Show($"ไม่พบรายชื่อลำดับที่ {FindIndexBox.Text} ในรายการ");
                     IndexEditBox.Enabled = false;
-                    NameEditBtn.Enabled = false;
+                    IndexEditBtn.Enabled = false;
                 }
             } else
             {
                 MessageBox.Show($"โปรดใส่ลำดับของรายชื่อให้ถูกต้อง");
                 IndexEditBox.Enabled = false;
-                NameEditBtn.Enabled = false;
+                IndexEditBtn.Enabled = false;
             }
             //FindIndexBox.Clear();
         }
-        private void NameEditBtn_Click(object sender, EventArgs e)
+        private void IndexEditBtn_Click(object sender, EventArgs e)
         {
             int index = int.Parse(FindIndexBox.Text) - 1; // ได้ index ที่ต้องการแก้ไขมาแล้ว
             string NewData = IndexEditBox.Text;
 
-            // ตรวจสอบขอบเขตของ index ก่อนแก้ไข
-            if (index >= 0 && index < list.size())
-            {
-                list.set(index, NewData); // แก้ไขข้อมูลที่ตำแหน่ง index
-                MessageBox.Show($"แก้ไขข้อมูลในตำแหน่งที่ {index + 1} เป็น {NewData} สำเร็จ");
-            }
-            else
-            {
-                MessageBox.Show("โปรดใส่ข้อมูลอีกครั้ง");
-            }
+            
+            list.set(index, NewData); // แก้ไขข้อมูลที่ตำแหน่ง index
+            MessageBox.Show($"แก้ไขข้อมูลในลำดับที่ {index + 1} เป็น {NewData} สำเร็จ");
 
             IndexEditBox.Clear();
             FindIndexBox.Clear();
@@ -110,11 +101,11 @@ namespace HW_ArrayList
         private void ListShowBtn_Click(object sender, EventArgs e)
         {
             ListView.Items.Clear();
-
+            
             // วนลูปข้อมูลใน ArrayList และเพิ่มลงใน ListBox
             for (int i = 0; i < list.size(); i++)
             {
-                ListView.Items.Add(list.get(i).ToString());
+                ListView.Items.Add($"{i + 1}. " + list.get(i));
             }
         }
     }
