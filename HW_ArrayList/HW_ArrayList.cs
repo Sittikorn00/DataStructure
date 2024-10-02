@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Lists;
+using LinkedLists;
 
 namespace HW_ArrayList
 {
@@ -11,7 +12,7 @@ namespace HW_ArrayList
             InitializeComponent();
         }
 
-        List list = new ArrayList(5);
+        List list = new DoublyLinked();
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
@@ -65,7 +66,7 @@ namespace HW_ArrayList
             if (int.TryParse(FindIndexBox.Text, out MyIndex))
             {
 
-                MyIndex--; // ทำให้ index เริ่มจาก 1 (มาจาก 1-1 = 0 ซึ่ง 0 จะเท่ากับลำดับที่ 0 ใน index)
+                MyIndex--; // ทำให้ index ที่ user กรอกจะนับเริ่มจาก 1 (มาจาก 1-1 = 0 ซึ่ง 0 จะเท่ากับลำดับที่ 0 ใน index)
 
                 if (MyIndex >= 0 && MyIndex < list.size())
                 {

@@ -7,12 +7,10 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            List x = new ArrayList(2);
-            x.add("a");
-            x.add("b");
-            x.add(1, "c");
-            x.remove("c");
-            x.remove(0);
+            List x = new ArrayList(1);
+            x.add("3");
+            x.add("2");
+            x.add(2,"1");
 
 
             Console.WriteLine(x.size());
