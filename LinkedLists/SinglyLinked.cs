@@ -24,7 +24,7 @@ namespace LinkedLists
         {
             if (index < SIZE)
             {
-                LinkedNode node = noteAt(index - 1);
+                LinkedNode node = nodeAt(index - 1);
                 node.next = new LinkedNode(e, node.next);
                 SIZE++;
             }
@@ -61,7 +61,7 @@ namespace LinkedLists
 
         public void remove(int index)
         {
-            LinkedNode node = noteAt(index - 1);
+            LinkedNode node = nodeAt(index - 1);
             removeAfter(node);
         }
 
@@ -72,12 +72,12 @@ namespace LinkedLists
 
         public object get(int index)
         {
-            return noteAt(index).e;
+            return nodeAt(index).e;
         }
 
         public void set(int index, object e)
         {
-            noteAt(index).e = e;
+            nodeAt(index).e = e;
         }
 
         public int size()
@@ -94,7 +94,7 @@ namespace LinkedLists
             }
         }
 
-        private LinkedNode noteAt(int index)
+        private LinkedNode nodeAt(int index)
         {
             LinkedNode node = first;
             for (int i = -1; i < index; i++)

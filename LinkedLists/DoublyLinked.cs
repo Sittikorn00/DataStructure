@@ -93,7 +93,12 @@ namespace LinkedLists // Circular doubly-linked list (Doubly-Linked List)
 
         public void remove(object e)
         {
-            throw new NotImplementedException();
+            LinkedNode node = first.next;
+            while (node != first && !node.e.Equals(e))
+            {
+                node = node.next;
+            }
+            removeNode(node);
         }
 
         public void set(int index, object e)
