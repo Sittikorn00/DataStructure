@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_ArrayList", "HW_ArrayLis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedLists", "LinkedLists\LinkedLists.csproj", "{8D0E9F9E-791B-471B-B3F8-63E03CBDC637}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacks", "Stacks\Stacks.csproj", "{25BB1C30-A90F-4AAF-A833-6366F8887A63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queues", "Queues\Queues.csproj", "{AE90BE1E-F34F-4116-8495-5E95C7063602}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{8D0E9F9E-791B-471B-B3F8-63E03CBDC637}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D0E9F9E-791B-471B-B3F8-63E03CBDC637}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D0E9F9E-791B-471B-B3F8-63E03CBDC637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25BB1C30-A90F-4AAF-A833-6366F8887A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25BB1C30-A90F-4AAF-A833-6366F8887A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25BB1C30-A90F-4AAF-A833-6366F8887A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25BB1C30-A90F-4AAF-A833-6366F8887A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE90BE1E-F34F-4116-8495-5E95C7063602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE90BE1E-F34F-4116-8495-5E95C7063602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE90BE1E-F34F-4116-8495-5E95C7063602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE90BE1E-F34F-4116-8495-5E95C7063602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

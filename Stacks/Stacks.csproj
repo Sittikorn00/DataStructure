@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1F75A8E-5B6A-413C-83AE-6771F156BA31}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Test</RootNamespace>
-    <AssemblyName>Test</AssemblyName>
+    <ProjectGuid>{25BB1C30-A90F-4AAF-A833-6366F8887A63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Stacks</RootNamespace>
+    <AssemblyName>Stacks</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,28 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ArrayStack.cs" />
+    <Compile Include="InfixPostfix.cs" />
+    <Compile Include="LinkedStack.cs" />
+    <Compile Include="MazeSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="Stack.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Collections\Collections.csproj">
       <Project>{67b841d4-6638-48ad-9294-836df9588e94}</Project>
       <Name>Collections</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LinkedLists\LinkedLists.csproj">
+      <Project>{8d0e9f9e-791b-471b-b3f8-63e03cbdc637}</Project>
+      <Name>LinkedLists</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lists\Lists.csproj">
       <Project>{bd527e38-04d9-4bb1-88d9-6948ed4f0d96}</Project>
       <Name>Lists</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SET\Sets.csproj">
-      <Project>{3d325be2-db4e-4d56-9913-30279c4060c5}</Project>
-      <Name>SET</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Stacks\Stacks.csproj">
-      <Project>{25bb1c30-a90f-4aaf-a833-6366f8887a63}</Project>
-      <Name>Stacks</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

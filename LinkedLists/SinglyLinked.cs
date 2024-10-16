@@ -67,7 +67,12 @@ namespace LinkedLists
 
         public void remove(object e)
         {
-
+            LinkedNode node = first.next;
+            while (node != first && !node.e.Equals(e))
+            {
+                node = node.next;
+            }
+            removeNode(node);
         }
 
         public object get(int index)
