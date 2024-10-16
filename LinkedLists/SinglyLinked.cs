@@ -72,7 +72,7 @@ namespace LinkedLists
             {
                 node = node.next;
             }
-            removeNode(node);
+            removeAfter(node);
         }
 
         public object get(int index)

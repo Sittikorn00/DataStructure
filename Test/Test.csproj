@@ -54,9 +54,17 @@
       <Project>{67b841d4-6638-48ad-9294-836df9588e94}</Project>
       <Name>Collections</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LinkedLists\LinkedLists.csproj">
+      <Project>{8d0e9f9e-791b-471b-b3f8-63e03cbdc637}</Project>
+      <Name>LinkedLists</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lists\Lists.csproj">
       <Project>{bd527e38-04d9-4bb1-88d9-6948ed4f0d96}</Project>
       <Name>Lists</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Queues\Queues.csproj">
+      <Project>{ae90be1e-f34f-4116-8495-5e95c7063602}</Project>
+      <Name>Queues</Name>
     </ProjectReference>
     <ProjectReference Include="..\SET\Sets.csproj">
       <Project>{3d325be2-db4e-4d56-9913-30279c4060c5}</Project>

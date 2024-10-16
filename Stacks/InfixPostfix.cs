@@ -61,7 +61,7 @@ namespace Stacks
         public static string Calculator(string v)
         {
             ArrayStack exp = new ArrayStack(v.Length);  // Create a stack instance for use within the method
-            int a, b, ans;
+            int a, b;
             for (int i = 0; i < v.Length; i++)
             {
                 string c = v.Substring(i, 1); //ดึง String ทีละตัวอักษร
