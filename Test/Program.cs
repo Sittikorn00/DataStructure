@@ -9,25 +9,14 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            string exp = "80+40-30";
+            Queue x = new BinaryHeap(5);
+            x.enqueue(10); x.enqueue(21); x.enqueue(11); x.enqueue(43); x.enqueue(12);
+            x.dequeue();
 
-            InfixPostfix.Converter(exp);
+            for (int i = 0; i < x.size(); i++)
+                Console.WriteLine(x.peek());
 
-            string postfixExpression = "8040+30-";
-            InfixPostfix.Calculator(postfixExpression);
-
-            char[,] maze = {
-                { 'S', '0', '0', '1', 'E' },
-                { '1', '1', '0', '0', '1' },
-                { '0', '0', '1', '0', '0' },
-                { '1', '1', '1', '0', '1' },
-                { '0', '0', '0', '0', '0' } };
-
-            MazeSolver.MazeRunner(maze);
-
-            int[] numbers = { 170, 45, 75, 90, -802, 24, 2, 66 };
-            // เรียกใช้ RadixSort
-            ArrayQueue.RadixSort(numbers);
         }
     }
 }
+

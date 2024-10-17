@@ -14,49 +14,111 @@ namespace Queues
             data = new object[cap];
             this.cap = cap;
         }
+        public static void heapSort(object[] x) // Ascending
+        {
+            BinaryHeap h = new BinaryHeap(0);
+            h.data = x;
+            h.SIZE = x.Length;
+
+            for (int k = h.size() - 1; k >= 0 ; k--)
+            {
+                h.reorderDown(k);
+            }
+            for (int k = h.size() - 1; k > 0; k--)
+            {
+                x[k] = h.dequeue();
+            }
+        }
         public object dequeue()
         {
-            throw new NotImplementedException();
-        }
+            object e = peek();
+            data[0] = data[--SIZE];
+            data[SIZE] = null;
 
+            if (SIZE > 1)
+            {
+                reorderDown(0);
+            }
+            return e;
+        }
         public void enqueue(object e)
         {
-            throw new NotImplementedException();
-        }
+            ensureCapacity();
+            data[SIZE] = e;
+            reorderUp(SIZE++);
 
+        }
         public bool isEmpty()
         {
             return SIZE == 0;
         }
-
         public object peek()
         {
-            throw new NotImplementedException();
+            if (SIZE > 0) return data[0];
+            return data[0];
         }
-
         public int size()
         {
             return SIZE;
         }
         private void reorderDown(int k)
         {
+            int child;
+            while ((child = 2 * k + 1) < SIZE)
+            {
+                if (child + 1 < SIZE && isGreaterThan(child+1,child))
+                {
+                    child++;
+                }
+                if (!isGreaterThan(child,k))
+                {
+                    break;
+                }
 
+                swap(k,child);
+                k = child;
+            }
         }
         private void reorderUp(int k)
         {
+            while (k > 0)
+            {
+                int parent = (k - 1) / 2;
 
+                if (!isGreaterThan(k,parent))
+                {
+                    break;
+                }
+
+                swap(k,parent);
+                k = parent;
+            }
         }
         private void swap(int i, int j)
         {
-
+            object t = data[i];
+            data[i] = data[j];
+            data[j] = t;
         }
-        private bool isGreaterThan(int i, int j)
+        private bool isGreaterThan(int i, int j) // Max-Heap
         {
-            return (i > j);
+            return ((IComparable)data[i]).CompareTo(data[j]) > 0;
+        }
+        private bool isLesserThan(int i, int j) // Min-Heap
+        {
+            return ((IComparable)data[i]).CompareTo(data[j]) < 0;
         }
         private void ensureCapacity()
         {
-
+            if (SIZE + 1 > data.Length)
+            {
+                object[] tempdata = new object[SIZE * 2];
+                for (int i = 0; i < SIZE; i++)
+                {
+                    tempdata[i] = data[i];
+                }
+                data = tempdata;
+            }
         }
     }
 }
