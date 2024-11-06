@@ -1,5 +1,4 @@
-﻿using System;
-using Lists;
+﻿using Lists;
 using LinkedLists;
 
 namespace Queues
@@ -9,12 +8,14 @@ namespace Queues
         private List list = new DoublyLinked();
         public object dequeue()
         {
-            throw new NotImplementedException();
+            object first = list.get(0); // ดึงค่าตัวแรกในลิสต์
+            list.remove(0); // ลบค่าตัวแรกออกจากลิสต์
+            return first;
         }
 
         public void enqueue(object e)
         {
-            throw new NotImplementedException();
+            list.add(e);
         }
 
         public bool isEmpty()
@@ -24,7 +25,7 @@ namespace Queues
 
         public object peek()
         {
-            throw new NotImplementedException();
+            return list.get(0);
         }
 
         public int size()

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Queues
 {
@@ -110,13 +109,10 @@ namespace Queues
         }
         private void ensureCapacity()
         {
-            if (SIZE + 1 > data.Length)
+            if (SIZE >= data.Length)
             {
-                object[] tempdata = new object[SIZE * 2];
-                for (int i = 0; i < SIZE; i++)
-                {
-                    tempdata[i] = data[i];
-                }
+                object[] tempdata = new object[2 * data.Length];
+                Array.Copy(data, tempdata, SIZE); // คัดลอกข้อมูลไปยังอาร์เรย์ใหม่
                 data = tempdata;
             }
         }

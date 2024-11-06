@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE90BE1E-F34F-4116-8495-5E95C7063602}</ProjectGuid>
+    <ProjectGuid>{279393A0-1175-4C9A-95A6-127CE5FDF798}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Queues</RootNamespace>
-    <AssemblyName>Queues</AssemblyName>
+    <RootNamespace>Trees</RootNamespace>
+    <AssemblyName>Trees</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,31 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayListPriorityQueue.cs" />
-    <Compile Include="ArrayListQueue.cs" />
-    <Compile Include="ArrayQueue.cs" />
-    <Compile Include="BinaryHeap.cs" />
-    <Compile Include="BinaryMinHeap.cs" />
-    <Compile Include="HW_IComparable.cs" />
-    <Compile Include="HW_LinkedListPriorityQueue.cs" />
-    <Compile Include="LinkedListPriorityQueue.cs" />
-    <Compile Include="LinkedListQueue.cs" />
-    <Compile Include="PriorityQueue.cs" />
+    <Compile Include="BinaryTree.cs" />
+    <Compile Include="BSTree.cs" />
+    <Compile Include="HuffmanTree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queue.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Collections\Collections.csproj">
-      <Project>{67b841d4-6638-48ad-9294-836df9588e94}</Project>
-      <Name>Collections</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LinkedLists\LinkedLists.csproj">
-      <Project>{8d0e9f9e-791b-471b-b3f8-63e03cbdc637}</Project>
-      <Name>LinkedLists</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lists\Lists.csproj">
-      <Project>{bd527e38-04d9-4bb1-88d9-6948ed4f0d96}</Project>
-      <Name>Lists</Name>
+    <ProjectReference Include="..\Queues\Queues.csproj">
+      <Project>{ae90be1e-f34f-4116-8495-5e95c7063602}</Project>
+      <Name>Queues</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
