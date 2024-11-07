@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1F75A8E-5B6A-413C-83AE-6771F156BA31}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Test</RootNamespace>
-    <AssemblyName>Test</AssemblyName>
+    <ProjectGuid>{5F053439-A340-48D1-BC95-9F0EFC0B9E4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Boxs</RootNamespace>
+    <AssemblyName>Boxs</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,25 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Box.cs" />
+    <Compile Include="LinkedBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Boxs\Boxs.csproj">
-      <Project>{5f053439-a340-48d1-bc95-9f0efc0b9e4f}</Project>
-      <Name>Boxs</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Buffers\Buffers.csproj">
-      <Project>{03ee457b-c8a8-40b1-9052-de6f569dee88}</Project>
-      <Name>Buffers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Collections\Collections.csproj">
-      <Project>{67b841d4-6638-48ad-9294-836df9588e94}</Project>
-      <Name>Collections</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LinkedLists\LinkedLists.csproj">
       <Project>{8d0e9f9e-791b-471b-b3f8-63e03cbdc637}</Project>
       <Name>LinkedLists</Name>
@@ -69,26 +53,6 @@
     <ProjectReference Include="..\Lists\Lists.csproj">
       <Project>{bd527e38-04d9-4bb1-88d9-6948ed4f0d96}</Project>
       <Name>Lists</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Pipes\Pipes.csproj">
-      <Project>{22bd953d-4e00-4350-8f9a-bd91a0fcf304}</Project>
-      <Name>Pipes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Queues\Queues.csproj">
-      <Project>{ae90be1e-f34f-4116-8495-5e95c7063602}</Project>
-      <Name>Queues</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SET\Sets.csproj">
-      <Project>{3d325be2-db4e-4d56-9913-30279c4060c5}</Project>
-      <Name>SET</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sorts\Sorts.csproj">
-      <Project>{9329bb60-cb1c-4a74-a260-0d580471b0ff}</Project>
-      <Name>Sorts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Stacks\Stacks.csproj">
-      <Project>{25bb1c30-a90f-4aaf-a833-6366f8887a63}</Project>
-      <Name>Stacks</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

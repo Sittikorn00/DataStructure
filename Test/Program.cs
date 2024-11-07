@@ -1,7 +1,5 @@
 ﻿using System;
-using Collections;
-using Queues;
-using Stacks;
+using Sorts;
 
 namespace Test
 {
@@ -9,13 +7,13 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            Queue x = new BinaryHeap(5);
-            x.enqueue(10); x.enqueue(21); x.enqueue(11); x.enqueue(43); x.enqueue(12);
-            x.dequeue();
-
-            for (int i = 0; i < x.size(); i++)
-                Console.WriteLine(x.peek());
-
+            Sort s = new ArraySort(3);
+            s.add(8); s.view();
+            s.add(4); s.view();
+            s.add(5); s.view();
+            s.add(1); s.view();
+            s.add(2); s.view();
+            s.add(2); s.view();
         }
     }
 }
